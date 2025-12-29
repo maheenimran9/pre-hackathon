@@ -395,7 +395,133 @@ header{
   }
 }
 
+/* =========================
+   MODERN TESTIMONIAL CARDS
+========================= */
+.testimonial-section {
+    background-color: #f8f9f5; /* Bohat halka background taake cards uth kar dikhein */
+    padding: 80px 0;
+}
 
+.testi-card {
+    background: #ffffff; 
+    padding: 40px 30px;
+    border-radius: 15px; /* Rounded corners */
+    border: 1px solid #ececec; /* Light border */
+    text-align: center;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    /* Default light shadow taake card lage */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Screenshot wala special border (Kelly Garcia card ke liye) */
+.active-card {
+    border: 2px solid #053634 !important;
+}
+
+/* =========================
+   HOVER: ZOOM + GLOW EFFECT
+========================= */
+.testi-card:hover {
+    transform: scale(1.05) translateY(-10px); /* Zoom aur thoda upar */
+    border-color: #f4c742; /* Border yellow ho jayega */
+    
+    /* Strong Glow Shadow */
+    box-shadow: 0 20px 40px rgba(5, 54, 52, 0.1), 
+                0 0 20px rgba(244, 199, 66, 0.4); 
+    z-index: 10;
+}
+
+/* Text Styles inside Card */
+.testi-quote {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.u-name {
+    font-family: "Amarna", sans-serif;
+    font-weight: 700;
+    color: #053634;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.u-desig {
+    font-size: 13px;
+    color: #7ba863;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Dots Styling */
+.testi-dots {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.t-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+    transition: 0.3s;
+}
+
+.active-dot {
+    background-color: #f4c742;
+    width: 25px; 
+    border-radius: 10px;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS (480px & Below)
+========================= */
+@media (max-width: 480px) {
+    .testimonial-section {
+        padding: 50px 10px; 
+    }
+
+    .testi-card {
+        padding: 25px 20px; 
+        margin: 0 auto 15px auto;
+        max-width: 95%; 
+    }
+
+    .testi-title {
+        font-size: 28px; 
+    }
+
+    .testi-quote {
+        font-size: 13px; 
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .u-name {
+        font-size: 15px;
+    }
+
+    .u-desig {
+        font-size: 11px;
+    }
+
+    
+    .testi-title::before {
+        width: 40px;
+        height: 40px;
+        left: -10px;
+    }
+}
 /* =========================
    RESPONSIVE
 ========================= */
