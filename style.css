@@ -10,6 +10,9 @@ html, body {
   overflow-x: hidden;
 }
 
+header{
+background-color: rgba(144, 144, 118, 0.668);
+}
 
 /* LINKS */
 .nav-link {
@@ -63,7 +66,6 @@ html, body {
   margin-bottom: 30px;
 }
 
-.order,
 .see {
   width: auto;
   margin: 5px 0;
@@ -81,7 +83,6 @@ html, body {
   margin-bottom: 34px;
 }
 
-.order,
 .see {
   padding: 14px 38px;
   font-size: 14px;
@@ -90,17 +91,6 @@ html, body {
   cursor: pointer;
   transition: all 0.35s ease;
   border: none;
-}
-
-.order {
-  background: linear-gradient(135deg, #4285F4, #3367D6);
-  color: #fff;
-  box-shadow: 0 12px 32px rgba(66,133,244,0.35);
-}
-
-.order:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 48px rgba(66,133,244,0.55);
 }
 
 .see {
@@ -143,10 +133,7 @@ html, body {
 
 }
 
-
-
 @media (max-width: 480px) {
-  .order,
   .see {
     width: 100%;
     margin: 8px 0;
@@ -183,7 +170,6 @@ html, body {
     margin-bottom: 15px;
   }
 
-  .order,
   .see {
     width: 100%; 
     font-size: 12px;
@@ -196,154 +182,61 @@ html, body {
   }
 }
 
+/* =========================
+   BRAND / LOGO SECTION
+========================= */
+
 #brand-collection {
-    border-bottom: 1px solid #E5E7DD;
-    margin-bottom: 160px;
-}
-.padding-medium {
-    padding-top: 2em;
-    padding-bottom: 2em;
+  background: #fff;
 }
 
-.container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+.brand-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
-#brand-collection .brand-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.brand-content .brand {
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  transition: 0.3s ease;
 }
 
-.brand{
-  height: 20px;
+.brand-content .brand:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
-img.single-image {
-    width: 100%;
-    height: auto;
-}
-
-img {
-    display: inline-block;
-    border: 0;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-@media (min-width: 992px) {
-    .col-md-6 {
-        width: 50%;
-    }
-}
-@media (min-width: 992px) {
-    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-        float: left;
-    }
-}
-
-#about .detail-entry {
-    margin: 90px 0 0 90px;
-}
-
-.section-header {
-    position: relative;
-}
-
-.section-title {
-    font-size: 2.8em;
-    font-weight: 600;
-    line-height: 1;
-    margin-bottom: 40px;
-    position: relative;
-    z-index: 0;
-}
-
-h2, .h2 {
-    font-size: 1.5em;
-    line-height: 1.4;
-}
-h1, h2, h3 {
-    margin: 25px 0;
-    text-transform: capitalize;
-}
-
-h4.sub-title {
-    font-size: 1.1em;
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    color: #053634;
-    margin-bottom: 20px;
-    text-transform: capitalize;
-}
-h4, .h4 {
-    font-size: 1.1em;
-    line-height: 1.4;
-}
-
-p {
-    margin: 0 0 20px 0;
-}
-
+/* Tablet */
 @media (max-width: 992px) {
-  .home-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .content {
-    text-align: center;
-    justify-self: center;
-  }
-
-  .content p {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-inner {
-    padding: 20px 12px;
+  .brand-content {
     gap: 30px;
   }
 
-  .content h1 {
-    font-size: 22px;
-  }
-
-  .content p {
-    font-size: 14px;
-  }
-
-  .see,
-  .order {
-    width: 100%;
+  .brand-content .brand {
+    max-width: 100px;
   }
 }
 
-@media (max-width: 180px) {
-  .content h1 {
-    font-size: 16px;
+/* Mobile */
+@media (max-width: 576px) {
+  .brand-content {
+    gap: 20px;
   }
 
-  .content p {
-    font-size: 11px;
+  .brand-content .brand {
+    max-width: 80px;
   }
 }
 
-.navbar-collapse {
-  text-align: center;
-}
-
-@media (max-width: 991px) {
-  .navbar .btn {
-    width: 100%;
-    margin-top: 12px;
+/* Ultra small */
+@media (max-width: 360px) {
+  .brand-content .brand {
+    max-width: 60px;
   }
 }
