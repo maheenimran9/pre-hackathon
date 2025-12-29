@@ -682,6 +682,118 @@ header{
     }
 }
 /* =========================
+   FOOTER MAIN STYLES
+========================= */
+.main-footer {
+    background-color: #faf8f2;
+    color: #555;
+    font-size: 14px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-heading {
+    font-family: 'Amarna', sans-serif;
+    color: #053634; 
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.footer-desc {
+    line-height: 1.8;
+    opacity: 0.8;
+    max-width: 320px;
+}
+
+.footer-links {
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #053634;
+    padding-left: 5px; 
+}
+
+.contact-info {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.copyright-text {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* =========================
+   SOCIAL ICONS (Big, Green & Glow)
+========================= */
+.social-icons {
+    display: flex;
+    gap: 25px; 
+    justify-content: flex-end;
+}
+
+.social-link {
+    color: #053634; 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    line-height: 1;
+}
+
+.social-link svg {
+    width: 26px; 
+    height: 26px;
+    display: block;
+}
+
+.social-link:hover {
+    color: #f4c742; 
+    transform: translateY(-8px) scale(1.2); 
+    
+    /* Glow effect */
+    filter: drop-shadow(0 0 10px rgba(244, 199, 66, 0.8));
+}
+
+/* =========================
+   RESPONSIVE FOOTER (480px & Below)
+========================= */
+@media (max-width: 768px) {
+    .main-footer {
+        text-align: center;
+    }
+    .footer-desc {
+        margin: 0 auto 20px auto;
+    }
+    .social-icons {
+        justify-content: center;
+        margin-top: 30px;
+        gap: 30px;
+    }
+    .footer-heading {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-heading {
+        font-size: 18px;
+    }
+    .social-link svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+/* =========================
    RESPONSIVE
 ========================= */
 
